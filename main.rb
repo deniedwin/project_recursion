@@ -14,13 +14,21 @@ def fibs(n)
     fibo.push(nx)
     n -= 1
   end
-  puts fibo
+  return fibo
 end
 
-fibs(8)
+# puts fibs(8)
 
 def fibs_rec(n)
-  puts 'fibs rec'
+  # base case
+  return [] if n == 0
+  return [0] if n == 1
+  return [0,1] if n == 2
+  # recursive case
+  fibo = fibs_rec(n - 1)
+  next_num = fibo[-1] + fibo[-2]
+  fibo.push(next_num)
+  return fibo
 end
 
-fibs_rec(3)
+puts fibs_rec(8)
