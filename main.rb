@@ -1,14 +1,4 @@
-# def fibs(n)
-#   # base cases
-#   return 0 if n == 0
-#   return 1 if n == 1
-#   # recursive case
-#   if n > 1
-#     fibs(n-1) + fibs(n-2)
-#   end
-# end
-
-# puts fibs(8)
+# methods that calculate the fibonacci sequence
 
 def fibs(n)
   n0 = 0
@@ -28,3 +18,9 @@ def fibs(n)
 end
 
 fibs(8)
+
+def fibs_rec(n)
+  puts 'fibs rec'
+end
+
+fibs_rec(3)
